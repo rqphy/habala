@@ -7,7 +7,7 @@ abstract class PostController {
     protected $template = __DIR__ . './../Views/template.php';
     protected $viewsDir = __DIR__ . './../Views/';
 
-    public function writePost(Post $post):void {
+    public function insertPost(Post $post):void {
         print_r('$post');
         $infos = array(
             'id' => $post['id'],

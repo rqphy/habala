@@ -8,5 +8,6 @@
 </head>
 <body>
 <h1>Home</h1>
+<p>C'est la home page</p>
 </body>
 </html>

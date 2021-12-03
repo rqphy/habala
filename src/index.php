@@ -6,7 +6,7 @@ switch ($request) {
     case '/':
         require __DIR__ . '/view/home.php';
         break;
-    case 'admin':
+    case '/admin':
         require __DIR__ . '/view/admin.php';
         break;
     default:

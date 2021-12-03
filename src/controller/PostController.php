@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . "../repository/db_connect.php";
+
 abstract class PostController {
 
     protected $params;

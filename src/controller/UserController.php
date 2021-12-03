@@ -18,7 +18,7 @@ abstract class UserController {
         );
         $stmt = $pdo->prepare('
         INSERT INTO infos (id, username, email, hashedPassword, isAdmin)
-        VALUES (:id, :imageUrl, :title, :content, :author);
+        VALUES (:id, :username, :email, :hashedPassword, :isAdmin);
         ');
         $stmt->execute($infos);
     }

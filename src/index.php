@@ -2,8 +2,8 @@
 session_start();
 
 // Autoload
-require 'Vendor/Core/SplClassLoader.php';
-require_once 'Config/autoload.php';
+// require 'Vendor/Core/SplClassLoader.php';
+require_once './vendor/autoload.php';
 
-$router = new \Vendor\Core\Router();
+$router = new \App\Controller\Router\Router();
 $router->getController();

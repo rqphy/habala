@@ -1,16 +1,9 @@
 <?php
+session_start();
 
-$request = $_SERVER['REQUEST_URI'];
+// Autoload
+require 'Vendor/Core/SplClassLoader.php';
+require_once 'Config/autoload.php';
 
-switch ($request) {
-    case '/':
-        require __DIR__ . '/view/home.php';
-        break;
-    case '/admin':
-        require __DIR__ . '/view/admin.php';
-        break;
-    default:
-        http_response_code(404);
-        require __DIR__ . '/view/404.php';
-        break;
-}
+$router = new \Vendor\Core\Router();
+$router->getController();

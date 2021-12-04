@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\controller;
 
 abstract class BaseController
 {
@@ -12,11 +12,19 @@ abstract class BaseController
 	{
 		$this->params = $params;
 
-		$method = 'execute' . ucfirst($action);
+		$method = $action;
 		if (!is_callable([$this, $method]))
 		{
 			throw new \RuntimeException('L\'action "' . $method . ': n\'est pas definie sur ce module');
 		}
 		$this->$method();
+	}
+
+	public function render(string $title, string $view, array $data)
+	{
+		$view = $this->viewsDir . $view . '/index.php';
+
+		require $view;
+		return require $this->template();
 	}
 }

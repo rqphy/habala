@@ -5,5 +5,5 @@ session_start();
 // require 'Vendor/Core/SplClassLoader.php';
 require_once './vendor/autoload.php';
 
-$router = new \App\Controller\Router\Router();
+$router = new \App\controller\Router\Router();
 $router->getController();

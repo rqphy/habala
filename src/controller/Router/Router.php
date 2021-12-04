@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Controller\Router;
+namespace App\controller\Router;
 
 class Router
 {
 	public function getController()
 	{
 		$xml = new \DOMDocument();
-		$xml->load('./routes.xml');
+		$xml->load(__DIR__ . '/routes.xml');
 		$routes = $xml->getElementsByTagName('route');
 
 		isset($_GET['p']) ? $path = htmlspecialchars($_GET['p']) : $path = "";
@@ -16,7 +16,7 @@ class Router
 		{
 			if ($path === $route->getAttribute('p'))
 			{
-				$controllerClass = 'Controller\\' / $route->getAttribute('controller');
+				$controllerClass = 'App\controller\\' . $route->getAttribute('controller');
 				$action = $route->getAttribute('action');
 				$params = [];
 				if ($route->hasAttribute('params'))

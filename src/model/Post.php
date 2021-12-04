@@ -1,5 +1,5 @@
 <?php
-Class Posts {
+Class Post {
 
     public int $id;
     public string $imageUrl;

@@ -1,5 +1,5 @@
 <?php
-class Comments {
+class Comment {
 
     public int $id;
     public string $author;

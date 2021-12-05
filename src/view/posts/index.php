@@ -1,5 +1,5 @@
 <?php
-$posts = $data;
+$posts = $data;	
 
 if ($posts)
 {
@@ -10,7 +10,7 @@ if ($posts)
 			<p><?= $post['title'] ?></p>
 			<img src="../../public/images/<?= $post['image_url'] ?>" alt="<?= $post['title'] ?>">
 			<p><?= $post['content'] ?></p>
-			<p><?= $post['author_id'] ?></p>
+			<p><?= $post['name'] ?></p>
 			<p><?= $post['date'] ?></p>
 		</article>
 		<?php

@@ -10,7 +10,6 @@ class PostController extends BaseController
     {
         $manager = new PostManager();
         $posts = $manager->getPosts();
-        // var_dump($posts);
         return $this->render('Posts', 'posts', $posts);
     }
 }

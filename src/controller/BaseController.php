@@ -24,7 +24,9 @@ abstract class BaseController
 	{
 		$view = $this->viewsDir . $view . '/index.php';
 
+		ob_start();
 		require $view;
-		return require $this->template();
+		$content = ob_get_clean();
+		return require $this->template;
 	}
 }

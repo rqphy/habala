@@ -1,8 +1,6 @@
 <?php
 $posts = $data;
 
-echo __DIR__ . '/../../static/images/';
-
 if ($posts)
 {
 	foreach ($posts as $post)
